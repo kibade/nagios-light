@@ -13,6 +13,8 @@ while True:
     message = client_socket.recv(1024).decode()
     if message == 'ON':
         GPIO.output(18, GPIO.HIGH)  # Turn on the LED
+        print('On')
     elif message == 'OFF':
         GPIO.output(18, GPIO.LOW)  # Turn off the LED
+        print('Off')
     client_socket.close()
